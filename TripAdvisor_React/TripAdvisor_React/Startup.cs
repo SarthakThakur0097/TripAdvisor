@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TripAdvisor_React.Data;
+using TripAdvisor_React.Data.Models.Services;
 
 namespace TripAdvisor_React
 {
@@ -28,6 +30,8 @@ namespace TripAdvisor_React
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
+            services.AddTransient<ITripService, TripService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

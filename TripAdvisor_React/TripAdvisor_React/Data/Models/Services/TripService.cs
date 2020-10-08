@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TripAdvisor_React.Data.Models.Services
 {
@@ -6,7 +7,7 @@ namespace TripAdvisor_React.Data.Models.Services
     {
         public void AddTrip(Trip trip)
         {
-            throw new System.NotImplementedException();
+            Data.Trips.Add(trip);
         }
 
         public void DeleteTrip(int tripId)
@@ -14,11 +15,8 @@ namespace TripAdvisor_React.Data.Models.Services
             throw new System.NotImplementedException();
         }
 
-        public List<Trip> GetAllTrips()
-        {
-            throw new System.NotImplementedException();
-        }
-
+        public List<Trip> GetAllTrips() => Data.Trips.ToList();
+        
         public Trip GetTripById(int tripId)
         {
             throw new System.NotImplementedException();

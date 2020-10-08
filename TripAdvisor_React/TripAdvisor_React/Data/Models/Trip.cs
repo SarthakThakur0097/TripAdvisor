@@ -8,6 +8,6 @@ namespace TripAdvisor_React.Data.Models
         public string Name { get; set; } 
         public string Description { get; set; } 
         public DateTime DateStarted { get; set; } 
-        public DateTime? DateEnded { get; set; } 
+        public DateTime? DateCompleted { get; set; } 
     }
 }
